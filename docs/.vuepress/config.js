@@ -23,6 +23,7 @@ module.exports = {
     repo: "wuyaoxing/vuepress-docs",
     repoLabel: "GitHub",
     editLinks: true,
+    docsDir: 'docs',
     locales: {
       "/": {
         label: "English",
