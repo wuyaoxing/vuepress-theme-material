@@ -1,3 +1,7 @@
-# Hello Vuepress!
+# vuepress-theme-material
 
-[https://wuyaoxing.github.io/projects/vuepress](https://wuyaoxing.github.io/projects/vuepress)
+> https://github.com/wuyaoxing/vuepress-theme-material
+
+## License
+
+MIT
