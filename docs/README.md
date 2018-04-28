@@ -1,5 +1,6 @@
 ---
 home: true
+layout: 'home'
 heroImage: /hero.png
 actionText: 快速上手 →
 actionLink: /guide/

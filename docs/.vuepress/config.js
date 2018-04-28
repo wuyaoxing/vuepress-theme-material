@@ -1,9 +1,9 @@
 module.exports = {
   base: '/vuepress-theme-material/',
   dest: 'public',
-  title: 'blog',
+  title: '吾家小站',
   avatar: '/avatar.jpg',
-  description: '俱怀逸兴壮思飞，欲上青天揽明月！',
+  description: '俱怀逸兴壮思飞，欲上青天揽明月',
   port: '9090',
   locales: {
     '/': {

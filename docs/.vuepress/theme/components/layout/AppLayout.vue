@@ -1,5 +1,5 @@
 <template>
-    <div class="site-app-layout">
+    <div class="site-app-layout --primary-background">
         <div class="site-app-layout__north">
             <slot name="north"></slot>
         </div>
