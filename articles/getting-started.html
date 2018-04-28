@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VuePress</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/vuepress-theme-material/avatar.png">
+  <link rel="manifest" href="/vuepress-theme-material/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/vuepress-theme-material/assets/css/0.styles.96e265fe.css" as="style"><link rel="preload" href="/vuepress-theme-material/assets/js/app.5558983f.js" as="script"><link rel="preload" href="/vuepress-theme-material/assets/js/4.e4de4f3e.js" as="script"><link rel="prefetch" href="/vuepress-theme-material/assets/js/7.d7ea1e6a.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/1.b43959cc.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/2.ba15cbd9.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/3.2032ee04.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/5.5cda0f20.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/6.d643b33d.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/8.35d8f993.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/9.f080a484.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/10.a17eb637.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/11.8d16f63b.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/12.951ed4f5.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/13.7979dbc5.js">
+    <link rel="stylesheet" href="/vuepress-theme-material/assets/css/0.styles.96e265fe.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="site-app-layout --primary-background"><div class="site-app-layout__north"></div><div class="site-app-layout__center"><div class="site-layout"><header class="site-header --ellipsis site-layout__header --primary">
+    快速上手 · article
+    <img alt></header><div class="site-layout__content"><div class="site-article --white"><div class="content"><h1 id="快速上手"><a href="#快速上手" aria-hidden="true" class="header-anchor">#</a> 快速上手</h1><div class="warning custom-block"><p class="custom-block-title">注意</p><p>请确保你的 Node.js 版本 &gt;= 8。</p></div><h2 id="全局安装"><a href="#全局安装" aria-hidden="true" class="header-anchor">#</a> 全局安装</h2><p>如果你只是想尝试一下 VuePress，你可以全局安装它：</p><pre class="language-bash"><code><span class="token comment"># 安装</span>
+yarn global add vuepress <span class="token comment"># 或者：npm install -g vuepress</span>
+
+<span class="token comment"># 新建一个 markdown 文件</span>
+<span class="token keyword">echo</span> <span class="token string">&quot;# Hello VuePress!&quot;</span> <span class="token operator">&gt;</span> README.md
+
+<span class="token comment"># 开始写作</span>
+vuepress dev <span class="token keyword">.</span>
+
+<span class="token comment"># 构建静态文件</span>
+vuepress build <span class="token keyword">.</span>
+</code></pre><h2 id="现有项目"><a href="#现有项目" aria-hidden="true" class="header-anchor">#</a> 现有项目</h2><p>如果你想在一个现有项目中使用 VuePress，同时想要在该项目中管理文档，则应该将 VuePress 安装为本地依赖。作为本地依赖安装让你可以使用持续集成工具，或者一些其他服务（比如 Netlify）来帮助你在每次提交代码时自动部署。</p><pre class="language-bash"><code><span class="token comment"># 将 VuePress 作为一个本地依赖安装</span>
+yarn add -D vuepress <span class="token comment"># 或者：npm install -D vuepress</span>
+
+<span class="token comment"># 新建一个 docs 文件夹</span>
+<span class="token function">mkdir</span> docs
+
+<span class="token comment"># 新建一个 markdown 文件</span>
+<span class="token keyword">echo</span> <span class="token string">&quot;# Hello VuePress!&quot;</span> <span class="token operator">&gt;</span> docs/README.md
+
+<span class="token comment"># 开始写作</span>
+npx vuepress dev docs
+</code></pre><div class="warning custom-block"><p class="custom-block-title">WARNING</p><p>如果你的现有项目依赖了 webpack 3.x，推荐使用 <a href="https://yarnpkg.com/en/" target="_blank" rel="noopener noreferrer">Yarn</a> 而不是 npm 来安装 VuePress。因为在这种情形下，npm 会生成错误的依赖树。</p></div><p>接着，在 <code>package.json</code> 里加一些脚本:</p><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;docs:dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress dev docs&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;docs:build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress build docs&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>然后就可以开始写作了:</p><pre class="language-bash"><code>yarn docs:dev <span class="token comment"># 或者：npm run docs:dev</span>
+</code></pre><p>要生成静态的 HTML 文件，运行：</p><pre class="language-bash"><code>yarn docs:build <span class="token comment"># 或者：npm run docs:build</span>
+</code></pre><p>默认情况下，文件将会被生成在 <code>.vuepress/dist</code>，当然，你也可以通过 <code>.vuepress/config.js</code> 中的 <code>dest</code> 字段来修改，生成的文件可以部署到任意的静态文件服务器上，参考 <a href="/vuepress-theme-material/articles/deploy.html">部署</a> 来了解更多。</p></div></div></div><footer class="site-footer --ellipsis site-layout__footer --dark --light-text-color">
+    Copyright © 2018-present 吾家小站
+    <a href="https://github.com/wuyaoxing/vuepress-theme-material">theme</a></footer></div></div><div class="site-app-layout__south"></div></div></div>
+    <script src="/vuepress-theme-material/assets/js/4.e4de4f3e.js" defer></script><script src="/vuepress-theme-material/assets/js/app.5558983f.js" defer></script>
+  </body>
+</html>

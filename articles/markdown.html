@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VuePress</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/vuepress-theme-material/avatar.png">
+  <link rel="manifest" href="/vuepress-theme-material/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/vuepress-theme-material/assets/css/0.styles.96e265fe.css" as="style"><link rel="preload" href="/vuepress-theme-material/assets/js/app.5558983f.js" as="script"><link rel="preload" href="/vuepress-theme-material/assets/js/2.ba15cbd9.js" as="script"><link rel="prefetch" href="/vuepress-theme-material/assets/js/7.d7ea1e6a.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/1.b43959cc.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/3.2032ee04.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/4.e4de4f3e.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/5.5cda0f20.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/6.d643b33d.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/8.35d8f993.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/9.f080a484.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/10.a17eb637.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/11.8d16f63b.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/12.951ed4f5.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/13.7979dbc5.js">
+    <link rel="stylesheet" href="/vuepress-theme-material/assets/css/0.styles.96e265fe.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="site-app-layout --primary-background"><div class="site-app-layout__north"></div><div class="site-app-layout__center"><div class="site-layout"><header class="site-header --ellipsis site-layout__header --primary">
+    Markdown 拓展 · article
+    <img alt></header><div class="site-layout__content"><div class="site-article --white"><div class="content"><h1 id="markdown-拓展"><a href="#markdown-拓展" aria-hidden="true" class="header-anchor">#</a> Markdown 拓展</h1><h2 id="header-anchors"><a href="#header-anchors" aria-hidden="true" class="header-anchor">#</a> Header Anchors</h2><p>所有的标题将会自动地应用 anchor 链接，anchor 的渲染可以通过 <a href="/vuepress-theme-material/config/#markdownanchor"><code>markdown.anchor</code></a> 来配置。</p><h2 id="链接"><a href="#链接" aria-hidden="true" class="header-anchor">#</a> 链接</h2><h3 id="内部链接"><a href="#内部链接" aria-hidden="true" class="header-anchor">#</a> 内部链接</h3><p>内部的、并以 <code>.md</code> or <code>.html</code> 结尾的链接，将会被转换成 <code>&lt;router-link&gt;</code> 用于 SPA 导航。</p><p>站内的每一个子文件夹都应当有一个 <code>README.md</code> 文件，它会被自动编译为 <code>index.html</code>。</p><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>在链接到一个文件夹的 <code>index.html</code> 时，确保你的链接以 <code>/</code> 结尾，否则该链接将导致 404。比如，用 <code>/config/</code> 而不是 <code>/config</code>。</p></div><p>如果你想要链接到另一个 markdown 文件：</p><ol><li>确保链接以 <code>.html</code> 或 <code>.md</code> 结尾；</li><li>确保路径大小写正确，因为路径的匹配是大小写敏感的。</li></ol><h4 id="示例"><a href="#示例" aria-hidden="true" class="header-anchor">#</a> 示例</h4><p>以如下的文件结构为例：</p><pre class="language-text"><code>.
+├─ README.md
+├─ foo
+│  ├─ README.md
+│  ├─ one.md
+│  └─ two.md
+└─ bar
+   ├─ README.md
+   ├─ three.md
+   └─ four.md
+</code></pre><pre class="language-md"><code><span class="token url">[Home](/)</span> <span class="token comment">&lt;!-- 跳转到根部的 README.md --&gt;</span>
+<span class="token url">[foo](/foo/)</span> <span class="token comment">&lt;!-- 跳转到 foo 文件夹的 index.html --&gt;</span>
+<span class="token url">[foo heading anchor](/foo/#heading)</span> <span class="token comment">&lt;!-- 跳转到 foo/index.html 的特定 anchor 位置 --&gt;</span>
+<span class="token url">[foo - one](/foo/one.html)</span> <span class="token comment">&lt;!-- 具体文件可以使用 .html 结尾 --&gt;</span>
+<span class="token url">[foo - two](/foo/two.md)</span> <span class="token comment">&lt;!-- 也可以用 .md --&gt;</span>
+</code></pre><h3 id="外部链接"><a href="#外部链接" aria-hidden="true" class="header-anchor">#</a> 外部链接</h3><p>外部的链接将会被自动地设置为  <code>target=&quot;_blank&quot;</code>:</p><ul><li><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer">vuejs.org</a></li><li><a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer">VuePress on GitHub</a></li></ul><h2 id="front-matter"><a href="#front-matter" aria-hidden="true" class="header-anchor">#</a> Front Matter</h2><p>VuePress 提供了对 <a href="https://jekyllrb.com/docs/frontmatter/" target="_blank" rel="noopener noreferrer">YAML front matter</a> 开箱即用的支持:</p><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> Blogging Like a Hacker
+<span class="token key atrule">lang</span><span class="token punctuation">:</span> en<span class="token punctuation">-</span>US
+<span class="token punctuation">---</span>
+</code></pre><p>这些数据可以在当前页的正文中使用，在任意的自定义或主题组件中，它可以通过 <code>$page</code> 来访问。</p><p><code>title</code> 和 <code>lang</code> 的 meta 将会被自动地注入到当前的页面中，当然你也可以指定一些额外需要注入的 meta：</p><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">meta</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> description
+    <span class="token key atrule">content</span><span class="token punctuation">:</span> hello
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> keywords
+    <span class="token key atrule">content</span><span class="token punctuation">:</span> super duper SEO
+<span class="token punctuation">---</span>
+</code></pre><h3 id="其他格式的-front-matter"><a href="#其他格式的-front-matter" aria-hidden="true" class="header-anchor">#</a> 其他格式的 Front Matter</h3><p>除了 YAML 之外，VuePress 也支持 JSON 或者 <a href="https://github.com/toml-lang/toml" target="_blank" rel="noopener noreferrer">TOML</a> 格式的 front matter。</p><p>JSON front matter 需要以花括号开头和结尾：</p><pre class="language-text"><code>---
+{
+  &quot;title&quot;: &quot;Blogging Like a Hacker&quot;,
+  &quot;lang&quot;: &quot;en-US&quot;
+}
+---
+</code></pre><p>TOML front matter 需要显式地标注为 TOML：</p><pre class="language-text"><code>---toml
+title = &quot;Blogging Like a Hacker&quot;
+lang = &quot;en-US&quot;
+---
+</code></pre><h2 id="github-风格的表格"><a href="#github-风格的表格" aria-hidden="true" class="header-anchor">#</a> GitHub 风格的表格</h2><p><strong>Input</strong></p><pre class="language-text"><code>| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+</code></pre><p><strong>Output</strong></p><table><thead><tr><th>Tables</th><th style="text-align:center">Are</th><th style="text-align:right">Cool</th></tr></thead><tbody><tr><td>col 3 is</td><td style="text-align:center">right-aligned</td><td style="text-align:right">$1600</td></tr><tr><td>col 2 is</td><td style="text-align:center">centered</td><td style="text-align:right">$12</td></tr><tr><td>zebra stripes</td><td style="text-align:center">are neat</td><td style="text-align:right">$1</td></tr></tbody></table><h2 id="emoji"><a href="#emoji" aria-hidden="true" class="header-anchor">#</a> Emoji</h2><p><strong>Input</strong></p><pre class="language-text"><code>:tada: :100:
+</code></pre><p><strong>Output</strong></p><p>🎉 💯</p><h2 id="目录"><a href="#目录" aria-hidden="true" class="header-anchor">#</a> 目录</h2><p><strong>Input</strong></p><pre class="language-text"><code>[[toc]]
+</code></pre><p><strong>Output</strong></p><p></p><div class="table-of-contents"><ul><li><a href="#header-anchors">Header Anchors</a></li><li><a href="#链接">链接</a><ul><li><a href="#内部链接">内部链接</a></li><li><a href="#外部链接">外部链接</a></li></ul></li><li><a href="#front-matter">Front Matter</a><ul><li><a href="#其他格式的-front-matter">其他格式的 Front Matter</a></li></ul></li><li><a href="#github-风格的表格">GitHub 风格的表格</a></li><li><a href="#emoji">Emoji</a></li><li><a href="#目录">目录</a></li><li><a href="#自定义容器">自定义容器</a></li><li><a href="#代码块中的行高亮">代码块中的行高亮</a></li><li><a href="#进阶配置">进阶配置</a></li></ul></div><p></p><p>目录（Table of Contents）的渲染可以通过  <a href="/vuepress-theme-material/config/#markdowntoc"><code>markdown.toc</code></a> 选项来配置。</p><h2 id="自定义容器"><a href="#自定义容器" aria-hidden="true" class="header-anchor">#</a> 自定义容器</h2><p><strong>Input</strong></p><pre class="language-text"><code>::: tip
+This is a tip
+:::
+
+::: warning
+This is a warning
+:::
+
+::: danger
+This is a dangerous warning
+:::
+</code></pre><p><strong>Output</strong></p><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>This is a tip</p></div><div class="warning custom-block"><p class="custom-block-title">WARNING</p><p>This is a warning</p></div><div class="danger custom-block"><p class="custom-block-title">WARNING</p><p>This is a dangerous thing</p></div><p>你也可以自定义块中的标题：</p><pre class="language-text"><code>::: danger STOP
+Danger zone, do not proceed
+:::
+</code></pre><div class="danger custom-block"><p class="custom-block-title">STOP</p><p>Danger zone, do not proceed</p></div><h2 id="代码块中的行高亮"><a href="#代码块中的行高亮" aria-hidden="true" class="header-anchor">#</a> 代码块中的行高亮</h2><p><strong>Input</strong></p><pre class="language-text"><code>``` js{4}
+export default {
+  data () {
+    return {
+      msg: 'Highlighted!'
+    }
+  }
+}
+```
+</code></pre><p><strong>Output</strong></p><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+<span class="highlighted-line">      msg<span class="token punctuation">:</span> <span class="token string">'Highlighted!'</span></span>    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="进阶配置"><a href="#进阶配置" aria-hidden="true" class="header-anchor">#</a> 进阶配置</h2><p>VuePress 使用 <a href="https://github.com/markdown-it/markdown-it" target="_blank" rel="noopener noreferrer">markdown-it</a> 来渲染 Markdown，上述大多数的拓展也都是通过自定义的插件实现的。想要进一步的话，你可以通过 <code>.vuepress/config.js</code> 的 <code>markdown</code> 选项，来对当前的 <code>markdown-it</code> 实例做一些自定义的配置：</p><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  markdown<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// markdown-it-anchor 的选项</span>
+    anchor<span class="token punctuation">:</span> <span class="token punctuation">{</span> permalink<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// markdown-it-toc 的选项</span>
+    toc<span class="token punctuation">:</span> <span class="token punctuation">{</span> includeLevel<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    config<span class="token punctuation">:</span> md <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 使用更多的 markdown-it 插件!</span>
+      md<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'markdown-it-xxx'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div><footer class="site-footer --ellipsis site-layout__footer --dark --light-text-color">
+    Copyright © 2018-present 吾家小站
+    <a href="https://github.com/wuyaoxing/vuepress-theme-material">theme</a></footer></div></div><div class="site-app-layout__south"></div></div></div>
+    <script src="/vuepress-theme-material/assets/js/2.ba15cbd9.js" defer></script><script src="/vuepress-theme-material/assets/js/app.5558983f.js" defer></script>
+  </body>
+</html>
