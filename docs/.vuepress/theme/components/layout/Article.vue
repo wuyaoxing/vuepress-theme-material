@@ -1,6 +1,6 @@
 <template>
-  <div class="site-article --white">
-      <Content :custom="false"/>
+  <div class="site-article">
+      <Content class="--white" :custom="false"/>
   </div>
 </template>
 <script>

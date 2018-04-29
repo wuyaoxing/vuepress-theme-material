@@ -1,7 +1,9 @@
 <template>
     <header class="site-header --ellipsis">
-        {{title}}
-        <img :src="$site.avatar" alt="">
+        <b>{{title}}</b>
+        <div class="site-header__nav">
+            <router-link to="/">Home</router-link>
+        </div>
     </header>
 </template>
 <script>
@@ -9,7 +11,7 @@ export default {
   name: 'site-title',
   computed: {
       title() {
-          return this.$page.title === 'Home' ? `${this.$site.description} · ${this.$site.title}` : `${this.$page.title} · article`
+          return this.$page.frontmatter.title === 'Articles' ? `${this.$site.title}` : `${this.$page.title} · article`
       }
   }
 }
@@ -19,8 +21,9 @@ export default {
 @import '../../style/variables';
 
 .site-header
+    display flex
+    justify-content space-between
     padding 0 15px
-    text-align center
     color $header-text-color
 </style>
 
