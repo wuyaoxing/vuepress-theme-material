@@ -19,7 +19,5 @@ export default {
 }
 </script>
 <style lang="stylus">
-.site-home
-    padding 50px
 </style>
 

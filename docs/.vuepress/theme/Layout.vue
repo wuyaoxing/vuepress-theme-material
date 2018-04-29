@@ -1,11 +1,13 @@
 <template>
     <AppLayout>
         <div class="site-layout">
-            <Header class="site-layout__header --primary"></Header>
+            <Header class="site-layout__header"
+                    :class="`${$material}__base`"></Header>
             <div class="site-layout__content">
-                <component :is="layout"/>
+                <component class="site-layout__content-container"
+                           :is="layout" />
+                <Footer class="site-layout__footer --light-text-color"></Footer>
             </div>
-            <Footer class="site-layout__footer --dark --light-text-color"></Footer>
         </div>
     </AppLayout>
 </template>
@@ -34,7 +36,6 @@ export default {
 </script>
 <style lang="stylus">
 @import './style/variables.styl'
-
 .site-layout
     position absolute
     top 0
@@ -44,7 +45,7 @@ export default {
     overflow hidden
     display flex
     flex-direction column
-    &__header, &__footer
+    &__header
         height 45px
         line-height 45px
     &__header
@@ -53,6 +54,10 @@ export default {
         flex 1
         overflow auto
         -webkit-overflow-scrolling touch
+        &-container
+            max-width 800px
+            padding 45px 10px
+            margin 0 auto
     &__footer
         box-shadow 0 0 3px 1px rgba(0, 0, 0, 0.4)
         text-align center
