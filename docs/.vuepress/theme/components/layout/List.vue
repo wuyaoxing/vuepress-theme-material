@@ -2,9 +2,9 @@
     <router-link :to="article.path"
                  class="site-list">
         <Card class="site-list__card --white">
-            <h3 class="site-list__title --primary-text-color">
+            <span class="site-list__title --primary-text-color">
                 {{article.title}}
-            </h3>
+            </span>
             <div class="site-list__date"></div>
         </Card>
     </router-link>
@@ -31,7 +31,7 @@ export default {
     &:last-of-type
         margin-bottom 0
     &__card
-        padding 0 20px
+        padding 20px
     &__title
-        font-weight 600
+        font-size 20px
 </style>

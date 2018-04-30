@@ -1,0 +1,16 @@
+{
+  "name": "vuepress-theme-material",
+  "version": "0.0.1",
+  "description": "vuepress-theme-material",
+  "main": "enhanceApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vuepress",
+    "vuepress-theme",
+    "vuepress-theme-material"
+  ],
+  "author": "wuyaoxing <82565097@qq.com>",
+  "license": "MIT"
+}

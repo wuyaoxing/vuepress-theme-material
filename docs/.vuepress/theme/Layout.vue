@@ -43,9 +43,6 @@ export default {
                 minHeight: this.isHome ? `calc(100vh - 75px)` : `calc(100vh - 125px)`
             }
         }
-    },
-    created() {
-        document.title = this.$site.title
     }
 }
 </script>

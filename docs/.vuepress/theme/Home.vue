@@ -58,6 +58,7 @@
 </template>
 <script>
 import Card from './components/layout/Card'
+import axios from 'axios'
 
 export default {
     name: 'site-home',
@@ -79,10 +80,14 @@ export default {
             this.$router.push(path)
         },
         fetchGithubUserInfo(username) {
-            return fetch(`https://api.github.com/users/${username}`)
-                .then(response => response.json())
-                .then(data => {
-                    this.github = data
+            // return fetch(`https://api.github.com/users/${username}`)
+            //     .then(response => response.json())
+            //     .then(data => {
+            //         this.github = data
+            //     })
+            axios.get(`https://api.github.com/users/${username}`)
+                .then(response => {
+                    this.github = response.data
                 })
         },
         init() {
