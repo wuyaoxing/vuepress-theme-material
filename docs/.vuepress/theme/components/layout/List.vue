@@ -1,11 +1,11 @@
 <template>
     <router-link :to="article.path"
                  class="site-list">
-        <Card class="site-list__card --white">
-            <span class="site-list__title --primary-text-color">
+        <Card class="site-list__card --white --primary-text-color">
+            <span class="site-list__title">
                 {{article.title}}
             </span>
-            <div class="site-list__date"></div>
+            <div class="site-list__date">{{formatDate(article.frontmatter.date)}}</div>
         </Card>
     </router-link>
 </template>
@@ -19,6 +19,11 @@ export default {
     },
     props: {
         article: Object
+    },
+    methods: {
+        formatDate(date) {
+            return new Date(date).toLocaleDateString()
+        }
     }
 }
 </script>
@@ -27,11 +32,13 @@ export default {
 .site-list
     display block
     text-decoration none
-    margin-bottom 15px
+    margin-bottom 8px
     &:last-of-type
         margin-bottom 0
     &__card
-        padding 20px
+        padding 16px
     &__title
         font-size 20px
+    &__date
+        margin-top 8px
 </style>

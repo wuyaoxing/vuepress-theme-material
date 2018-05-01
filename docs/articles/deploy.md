@@ -1,3 +1,8 @@
+---
+title: 部署
+date: '2018-04-26'
+---
+
 # 部署
 
 下述的指南基于以下条件：
@@ -61,9 +66,9 @@ cd -
 1. 在 `docs/.vuepress/config.js` 中设置正确的 `base`。
 
    如果你打算发布到 `https://<USERNAME or GROUP>.gitlab.io/`，则可以省略这一步，因为 `base` 默认即是 `"/"`。
-  
+
    如果你打算发布到 `https://<USERNAME or GROUP>.gitlab.io/<REPO>/`（也就是说你的仓库在 `https://gitlab.com/<USERNAME>/REPO>`），则将 `base` 设置为 `"/<REPO>/"`。
-  
+
 2. 在 `.vuepress/config.js` 中将 `dest` 设置为 `public`。
 3. 在你项目的根目录下创建一个名为 `.gitlab-ci.yml` 的文件，无论何时你提交了更改，它都会帮助你自动构建和部署：
 

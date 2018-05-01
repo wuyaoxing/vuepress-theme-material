@@ -1,3 +1,8 @@
+---
+title: 在 Markdown 中 使用 Vue
+date: '2018-04-30'
+---
+
 # 在 Markdown 中 使用 Vue
 
 ## 浏览器的 API 访问限制
@@ -134,7 +139,7 @@ VuePress 对以下预处理器已经内置相关的 webpack 配置：`sass`、`s
 ```bash
 yarn add -D sass-loader node-sass
 ```
- 
+
 然后你就可以在 Markdown 或是组件中使用如下代码：
 
 ``` vue
@@ -152,7 +157,7 @@ yarn add -D pug pug-plain-loader
 
 ::: tip
 需要指出的是，如果你是一个 `stylus` 用户，你并不需要在你的项目中安装 `stylus` 和 `stylus-loader`，因为 VuePress 已经内置了它们。
-  
+
 对于那些没有内置的预处理器，除了安装对应的依赖，你还需要 [拓展内部的 Webpack 配置](../config/#configurewebpack)。
 :::
 
