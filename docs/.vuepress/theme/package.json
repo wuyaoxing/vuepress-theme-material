@@ -12,5 +12,8 @@
     "vuepress-theme-material"
   ],
   "author": "wuyaoxing <82565097@qq.com>",
+  "dependencies": {
+    "axios": "^0.16.2"
+  },
   "license": "MIT"
 }

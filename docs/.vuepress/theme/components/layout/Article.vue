@@ -1,7 +1,7 @@
 <template>
-  <div class="site-article">
+  <div class="site-article --white">
       <div ref="line"></div>
-      <Content class="--white" :custom="false"/>
+      <Content :custom="false"/>
   </div>
 </template>
 <script>
@@ -16,8 +16,6 @@ export default {
 </script>
 <style lang="stylus">
 .site-article
-    margin 15px
-    padding 5px
-
+    box-shadow 0 6px 30px rgba(0,0,0,0.4)
 </style>
 

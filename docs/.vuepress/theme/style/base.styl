@@ -1,2 +1,14 @@
 html, body
   font-size: $font-size-base
+
+@media all and (min-width: 1600px)
+  .site-layout__content-container
+    max-width 1200px
+
+@media all and (max-width: 1600px)
+  .site-layout__content-container
+    max-width 1000px
+
+@media all and (max-width: 1200px)
+  .site-layout__content-container
+    max-width 800px
