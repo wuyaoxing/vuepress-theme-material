@@ -1,6 +1,8 @@
 ---
 title: 快速上手
 date: '2018-04-27'
+tags:
+    - getting-started
 ---
 
 # 快速上手

@@ -1,6 +1,6 @@
 <template>
     <div class="site-articles">
-        <List :article="item" v-for="item in articles"></List>
+        <List :article="item" v-for="(item, index) in articles" :key="item.title + index"></List>
     </div>
 </template>
 <script>

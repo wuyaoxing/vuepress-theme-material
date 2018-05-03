@@ -1,6 +1,8 @@
 ---
 title: 部署
 date: '2018-04-26'
+tags:
+    - deploy
 ---
 
 # 部署
