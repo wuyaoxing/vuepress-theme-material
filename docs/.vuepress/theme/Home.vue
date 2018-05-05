@@ -22,7 +22,7 @@
                             <b>{{themeConfig.username}}</b>
                         </a>
                     </p>
-                    <p>{{github.location}}</p>
+                    <p v-if="github.location"><i class="icon-location"></i> {{github.location}}</p>
                     <!-- <p>{{github.bio}}</p> -->
                 </div>
                 <ul class="site-home__user-github">
@@ -106,6 +106,7 @@ export default {
     &__container
         display flex
         flex-wrap wrap
+        padding-top 60px
     &__description
         display flex
         flex-direction column
@@ -175,7 +176,7 @@ export default {
     &__link
         display flex
         justify-content center
-        margin-top 50px
+        margin 50px 0 30px
         &-articles
             width 210px
             line-height 50px
@@ -184,9 +185,11 @@ export default {
             &:hover
                 text-decoration underline
     @media all and (max-width: 700px)
-        .site-home__description, .site-home__user
-            flex-basis 100%
-            margin-right 0
-            margin-bottom 15px
-            // flex-direction column-reverse
+        .site-home
+            &__container
+                padding 0
+            &__description, &__user
+                flex-basis 100%
+                margin-right 0
+                margin-bottom 15px
 </style>

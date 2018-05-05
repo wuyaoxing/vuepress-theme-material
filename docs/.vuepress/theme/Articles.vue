@@ -18,3 +18,7 @@ export default {
     }
 }
 </script>
+<style lang="stylus">
+.site-articles
+    padding 20px!important
+</style>

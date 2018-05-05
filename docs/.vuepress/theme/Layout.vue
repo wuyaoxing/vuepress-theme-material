@@ -40,7 +40,7 @@ export default {
         },
         containerStyle() {
             return {
-                minHeight: this.isHome ? `calc(100vh - 135px)` : `calc(100vh - 185px)`
+                minHeight: this.isHome ? `calc(100vh - 75px)` : `calc(100vh - 125px)`
             }
         }
     }
@@ -67,7 +67,7 @@ export default {
         -webkit-overflow-scrolling touch
         &-container
             padding 10px
-            margin 30px auto
+            margin 0 auto
             box-sizing border-box
     &__footer
         height 75px

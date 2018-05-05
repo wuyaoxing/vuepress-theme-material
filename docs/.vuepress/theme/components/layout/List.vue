@@ -44,12 +44,13 @@ export default {
         padding 16px
     &__title
         font-size 20px
+        font-weight 600
     &__date
         margin 8px 0
     &__tags
         display flex
         align-items center
-        margin-top 16px
+        margin-top 24px
 .site-tag
     padding 5px
     margin-right 5px
