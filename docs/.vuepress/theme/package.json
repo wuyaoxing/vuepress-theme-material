@@ -1,8 +1,9 @@
 {
   "name": "vuepress-theme-material",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "vuepress-theme-material",
   "main": "enhanceApp.js",
+  "homepage": "https://github.com/wuyaoxing/vuepress-theme-material/blob/master/README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

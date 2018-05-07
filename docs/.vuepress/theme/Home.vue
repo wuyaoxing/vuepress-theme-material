@@ -50,8 +50,8 @@
         </div>
         <div class="site-home__link">
             <Card class="site-home__link-articles --white"
-                  @click.native="goRouter('articles')">
-                <b>Go To Articles !</b>
+                  @click.native="goRouter(articleDir)">
+                <b>Go To {{articleDir}} !</b>
             </Card>
         </div>
     </div>
@@ -73,6 +73,9 @@ export default {
     computed: {
         themeConfig() {
             return this.$site.themeConfig
+        },
+        articleDir() {
+            return this.themeConfig.articleDir
         }
     },
     methods: {

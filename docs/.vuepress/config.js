@@ -48,6 +48,7 @@ module.exports = {
             url: 'https://weibo.com'
         }
     ],
+    // 文章目录
     articleDir: 'articles',
     nav: [
       {
