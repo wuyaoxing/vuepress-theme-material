@@ -14,11 +14,8 @@ tags:
 
 ```js
 module.exports = {
-  base: '/vuepress-theme-material/',
-  dest: 'public',
   title: `Wuyaoxing's Blog`,
   description: '俱怀逸兴壮思飞，欲上青天揽明月',
-  port: '9090',
   locales: {
     '/': {
       lang: 'zh-CN',
@@ -38,8 +35,9 @@ module.exports = {
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
   serviceWorker: true,
-  theme: '',
+  theme: 'material',
   themeConfig: {
+    // 主页banner
     background: './bg.jpg',
     // material 主题
     material: 'indigo',
@@ -73,7 +71,6 @@ module.exports = {
     ]
   }
 }
-
 ```
 
 `docs/README.md`

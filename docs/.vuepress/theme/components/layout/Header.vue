@@ -25,7 +25,7 @@ export default {
     display flex
     justify-content space-between
     padding-left 15px
-    color $header-text-color
+    color $white-text-color
     &__nav
         i
             padding 15px

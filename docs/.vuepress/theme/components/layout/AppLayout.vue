@@ -31,6 +31,7 @@ export default {
         z-index 1
         flex 1 1
         contain strict
+        overflow hidden
     &__south
         position relative
         z-index 2

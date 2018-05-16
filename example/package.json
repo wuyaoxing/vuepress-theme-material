@@ -12,6 +12,6 @@
     "devDependencies": {
         "axios": "^0.16.2",
         "vuepress": "^0.8.4",
-        "vuepress-theme-material": "^0.0.2"
+        "vuepress-theme-material": "^0.0.3"
     }
 }

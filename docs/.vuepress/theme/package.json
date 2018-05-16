@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-material",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "vuepress-theme-material",
   "main": "enhanceApp.js",
   "homepage": "https://github.com/wuyaoxing/vuepress-theme-material/blob/master/README.md",

@@ -22,7 +22,8 @@
                             <b>{{themeConfig.username}}</b>
                         </a>
                     </p>
-                    <p v-if="github.location"><i class="icon-location"></i> {{github.location}}</p>
+                    <p v-if="github.location">
+                        <i class="icon-location"></i> {{github.location}}</p>
                     <!-- <p>{{github.bio}}</p> -->
                 </div>
                 <ul class="site-home__user-github">
@@ -67,7 +68,8 @@ export default {
     },
     data() {
         return {
-            github: {}
+            github: {},
+            animationId: ''
         }
     },
     computed: {
@@ -76,6 +78,9 @@ export default {
         },
         articleDir() {
             return this.themeConfig.articleDir
+        },
+        material() {
+            return this.themeConfig.material
         }
     },
     methods: {
@@ -100,6 +105,59 @@ export default {
     },
     created() {
         this.init()
+    },
+    mounted() {
+        const lineColors = {
+            purple: [
+                '#4A148C'
+            ],
+            'deep-purple': [
+                '#311B92'
+            ],
+            indigo: [
+                '#1A237E'
+            ],
+            red: [
+                '#B71C1C'
+            ]
+        }
+        //定义波浪的颜色
+        const lines = lineColors[this.material || 'purple']
+        let step = 0
+        function loop() {
+            const canvas = document.getElementById('canvas')
+            if (!canvas) return
+            const ctx = canvas.getContext('2d')
+            const height = document.body.offsetHeight
+            canvas.width = document.body.offsetWidth
+            canvas.height = height;
+            ctx.clearRect(0, 0, canvas.width, height)
+            // 波浪大小
+            const boHeight = height / 20
+            const posHeight = height / 1.3
+            //初始角度为0
+            step++
+            for (let j = lines.length - 1; j >= 0; j--) {
+                ctx.fillStyle = lines[j];
+                //每个矩形的角度都不同，每个之间相差45度
+                const angle = (step + j * 50) * Math.PI / 120;
+                const deltaHeight = Math.sin(angle) * boHeight;
+                const deltaHeightRight = Math.cos(angle) * boHeight;
+                ctx.beginPath();
+                ctx.moveTo(0, posHeight + deltaHeight);
+                ctx.bezierCurveTo(canvas.width / 2, posHeight + deltaHeight - boHeight, canvas.width / 2, posHeight + deltaHeightRight - boHeight, canvas.width, posHeight + deltaHeightRight);
+                ctx.lineTo(canvas.width, canvas.height);
+                ctx.lineTo(0, canvas.height);
+                ctx.lineTo(0, posHeight + deltaHeight);
+                ctx.closePath();
+                ctx.fill();
+            }
+            return window.requestAnimationFrame(loop)
+        }
+        this.animationId = loop()
+    },
+    beforeDestroy() {
+        window.cancelAnimationFrame(this.animationId)
     }
 }
 </script>
@@ -195,4 +253,6 @@ export default {
                 flex-basis 100%
                 margin-right 0
                 margin-bottom 15px
+            &__link
+                margin-bottom 30%
 </style>

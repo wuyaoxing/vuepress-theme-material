@@ -4694,9 +4694,9 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
-vuepress-theme-material@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-material/-/vuepress-theme-material-0.0.2.tgz#476dca505e98918ce88c964182030f8fd86d8ee6"
+vuepress-theme-material@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-material/-/vuepress-theme-material-0.0.3.tgz#db52233672495ed9d67847de20e59746bbbb3108"
   dependencies:
     axios "^0.16.2"
 

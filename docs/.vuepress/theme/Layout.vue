@@ -1,5 +1,6 @@
 <template>
     <AppLayout :class="$material">
+        <canvas id="canvas" v-if="isHome"></canvas>
         <div class="site-layout">
             <Header class="site-layout__header"
                     :class="`${$material}__base`"
@@ -8,7 +9,7 @@
                 <component class="site-layout__content-container"
                            :style="containerStyle"
                            :is="layout" />
-                <Footer class="site-layout__footer --light-text-color"></Footer>
+                <Footer class="site-layout__footer" v-if="!isHome"></Footer>
             </div>
         </div>
     </AppLayout>
@@ -74,4 +75,5 @@ export default {
         box-shadow 0 0 3px 1px rgba(0, 0, 0, 0.4)
         text-align center
         font-size $font-size-small
+        color $white-text-color
 </style>

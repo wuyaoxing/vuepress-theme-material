@@ -9,8 +9,8 @@
             Power by
             <a href="https://vuepress.vuejs.org"
                target="_blank">VuePress</a> Theme
-            <a href="https://github.com/wuyaoxing/vuepress-theme-meterial"
-               target="_blank">meterial</a>
+            <a href="https://github.com/wuyaoxing/vuepress-theme-material"
+               target="_blank">material</a>
         </div>
     </footer>
 </template>
@@ -23,7 +23,6 @@
         line-height 45px
     a
         padding 0 5px
-        color #d1c4e9
         &:hover
-            color $header-text-color
+            color $white-text-color
 </style>
