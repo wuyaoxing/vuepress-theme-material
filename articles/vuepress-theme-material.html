@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VuePress</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/vuepress-theme-material/favicon.ico">
+  <link rel="manifest" href="/vuepress-theme-material/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/vuepress-theme-material/assets/css/0.styles.1e4ac3ea.css" as="style"><link rel="preload" href="/vuepress-theme-material/assets/js/app.dbad28eb.js" as="script"><link rel="preload" href="/vuepress-theme-material/assets/js/1.6e0a6e76.js" as="script"><link rel="prefetch" href="/vuepress-theme-material/assets/js/6.44169d46.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/2.e5d60052.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/3.fe83ecb2.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/4.02c2141f.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/5.09d521be.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/7.8abcb68f.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/8.e5914329.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/9.6ef1309f.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/10.8cadd1e6.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/11.52a179ad.js"><link rel="prefetch" href="/vuepress-theme-material/assets/js/12.91b73af2.js">
+    <link rel="stylesheet" href="/vuepress-theme-material/assets/css/0.styles.1e4ac3ea.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="site-app-layout --primary-background material__indigo"><div class="site-app-layout__north"></div><div class="site-app-layout__center"><!----><div class="site-layout"><header class="site-header --ellipsis site-layout__header material__indigo__base"><b>vuepress-theme-material · article</b><div class="site-header__nav"><a href="/vuepress-theme-material/" class="router-link-active"><i class="icon-home"></i></a></div></header><div class="site-layout__content"><div class="site-article site-layout__content-container" style="min-height:calc(100vh - 125px);"><div class="site-article__line"></div><div class="site-article__content --white"><div class="content"><h2 id="安装"><a href="#安装" aria-hidden="true" class="header-anchor">#</a> 安装</h2><blockquote><p>yarn add vuepress-theme-material || npm i vuepress-theme-material</p></blockquote><h2 id="配置"><a href="#配置" aria-hidden="true" class="header-anchor">#</a> 配置</h2><p><code>docs/vuepress/config.js</code></p><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  title<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`Wuyaoxing's Blog`</span></span><span class="token punctuation">,</span>
+  description<span class="token punctuation">:</span> <span class="token string">'俱怀逸兴壮思飞，欲上青天揽明月'</span><span class="token punctuation">,</span>
+  locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      lang<span class="token punctuation">:</span> <span class="token string">'zh-CN'</span><span class="token punctuation">,</span>
+      title<span class="token punctuation">:</span> <span class="token string">'blog'</span><span class="token punctuation">,</span>
+      description<span class="token punctuation">:</span> <span class="token string">'俱怀逸兴壮思飞，欲上青天揽明月！'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  head<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token string">'link'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> rel<span class="token punctuation">:</span> <span class="token string">'icon'</span><span class="token punctuation">,</span> href<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`/favicon.ico`</span></span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'link'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> rel<span class="token punctuation">:</span> <span class="token string">'manifest'</span><span class="token punctuation">,</span> href<span class="token punctuation">:</span> <span class="token string">'/manifest.json'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'meta'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'theme-color'</span><span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token string">'#3eaf7c'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'meta'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'apple-mobile-web-app-capable'</span><span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token string">'yes'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">'meta'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'apple-mobile-web-app-status-bar-style'</span><span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token string">'black'</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'meta'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'msapplication-TileColor'</span><span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token string">'#000000'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  serviceWorker<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  theme<span class="token punctuation">:</span> <span class="token string">'material'</span><span class="token punctuation">,</span>
+  themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 主页banner</span>
+    background<span class="token punctuation">:</span> <span class="token string">'./bg.jpg'</span><span class="token punctuation">,</span>
+    <span class="token comment">// material 主题</span>
+    material<span class="token punctuation">:</span> <span class="token string">'indigo'</span><span class="token punctuation">,</span>
+    <span class="token comment">// github username</span>
+    username<span class="token punctuation">:</span> <span class="token string">'wuyaoxing'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 社交网站</span>
+    social<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> <span class="token string">'知乎'</span><span class="token punctuation">,</span>
+            icon<span class="token punctuation">:</span> <span class="token string">'zhihu'</span><span class="token punctuation">,</span>
+            url<span class="token punctuation">:</span> <span class="token string">'https://www.zhihu.com'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> <span class="token string">'github'</span><span class="token punctuation">,</span>
+            icon<span class="token punctuation">:</span> <span class="token string">'github'</span><span class="token punctuation">,</span>
+            url<span class="token punctuation">:</span> <span class="token string">'https://github.com/wuyaoxing'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            name<span class="token punctuation">:</span> <span class="token string">'微博'</span><span class="token punctuation">,</span>
+            icon<span class="token punctuation">:</span> <span class="token string">'weibo'</span><span class="token punctuation">,</span>
+            url<span class="token punctuation">:</span> <span class="token string">'https://weibo.com'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token comment">// 文章目录</span>
+    articleDir<span class="token punctuation">:</span> <span class="token string">'articles'</span><span class="token punctuation">,</span>
+    nav<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        text<span class="token punctuation">:</span> <span class="token string">'文章'</span><span class="token punctuation">,</span>
+        link<span class="token punctuation">:</span> <span class="token string">'/articles/'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p><code>docs/README.md</code></p><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> <span class="token string">'home'</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'Home'</span>
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token string">'2018-05-01'</span>
+<span class="token punctuation">---</span>
+</code></pre><p>layout home对应主页布局</p><p>假定你的文章都放在<code>articles</code>目录</p><p><code>docs/articles/*.md</code></p><p>需要给出以下基本信息</p><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> vuepress<span class="token punctuation">-</span>theme<span class="token punctuation">-</span>material
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token string">'2018-05-01 14:05:05'</span>
+<span class="token key atrule">tags</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> vuepress
+<span class="token punctuation">---</span>
+</code></pre><p>Go!</p></div></div></div><footer class="site-footer --ellipsis site-layout__footer"><div class="site-footer__copyright material__indigo__darken-3">
+        Copyright © 2018-present Wuyaoxing's Blog
+    </div><div class="site-footer__theme material__indigo__darken-4">
+        Power by
+        <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a> Theme
+        <a href="https://github.com/wuyaoxing/vuepress-theme-material" target="_blank">material</a></div></footer></div></div></div><div class="site-app-layout__south"></div></div></div>
+    <script src="/vuepress-theme-material/assets/js/1.6e0a6e76.js" defer></script><script src="/vuepress-theme-material/assets/js/app.dbad28eb.js" defer></script>
+  </body>
+</html>
